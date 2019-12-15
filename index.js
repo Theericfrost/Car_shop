@@ -9,8 +9,11 @@ const compression = require('compression')
 const mainRoutes = require('./routes/main')
 const requestRoutes = require('./routes/request')
 const technicpageRoutes = require('./routes/technicpage')
+const fronttechnicpageRoutes = require('./routes/fronttechnicpage')
+
 const addRoutes = require('./routes/add')
 const menuRoutes = require('./routes/menu')
+
 
 const PORT =  process.env.PORT || 3000;
 const server = express();
@@ -32,6 +35,7 @@ server.use(compression())
 server.use('/', mainRoutes)
 server.use('/request', requestRoutes)
 server.use('/technicpage', technicpageRoutes)
+server.use('/technicpage/fronttechnicpage', fronttechnicpageRoutes)
 server.use('/add', addRoutes)
 server.use('/menu', menuRoutes)
 

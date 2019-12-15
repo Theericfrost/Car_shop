@@ -20,6 +20,7 @@ router.post('/', async (req,res)=>{
         price: req.body.price,
         description : req.body.description,
         img: req.body.img,
+        brand : req.body.brand ,
         motor: req.body.motor,
         fullPower : req.body.fullPower,
         netPower: req.body.netPower,

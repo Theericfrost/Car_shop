@@ -15,7 +15,11 @@ const frontTechnicUnitSchema = new Schema({
     },
     img: {
         type: String,
-        required: true  
+        required: false
+    },
+    brand: {
+        type: String,
+        required: true
     },
     motor: String,
     fullPower : Number,
