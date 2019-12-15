@@ -8,7 +8,7 @@ router.get('/', async (req,res)=>{
     try{
 
         const fronts = await Front.find()
-        .select('title price description img')
+        .select('title price description img bucketCapacity weightLift')
         res.status(200)
         res.render('fronttechnicpage',{
             fronts

@@ -3,13 +3,18 @@
     <h3>Бренд</h3>
     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab, nisi.</p>
     <div class='technic_container'>
+  
+
         {{#each fronts}}
         <div class="technic_card">
             
-            <img src="{{img}}" alt="error">
+            <img class="technic_card_img" src="http://localhost:3000/img/lgzt/{{title}}.png" alt="error">
             <h4>{{title}}</h4>
             <p>{{description}}</p>     
             <p class="price">{{price}}</p>
+            
+            <p>Емкость ковша {{bucketCapacity}} м<sup>3</sup></p>
+            <p>Грузоподъёмность {{weightLift}} кг</p>
             <a class="btn  grey darken-3" href="/technicpage/fronttechnicpage/{{_id}}">Открыть </a>
         </div>
         {{/each}}

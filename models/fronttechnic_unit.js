@@ -5,39 +5,47 @@ const frontTechnicUnitSchema = new Schema({
         type: String,
         required: true
     },
-    price: {
-        type: Number,
-        required: true
+    img: {
+        type: String,
+        required: false
     },
     description : {
         type: String,
         required: true
     },
-    img: {
-        type: String,
-        required: false
-    },
+    price: {
+        type: Number,
+        required: true
+    },   
     brand: {
         type: String,
         required: true
     },
-    motor: String,
-    fullPower : Number,
-    netPower: Number,
-    operatingWeight:  Number,
+    weightLift: Number,
     bucketCapacity: Number,
-    breakingForce: Number,
-    dischargeHeight: Number,
-    maxDischargeHeight: Number,
-    movementSpeedForward: Number,
-    movementSpeedBack: Number,
-    gearsForward: Number,
-    gearsBack: Number,
-    lengthWithBucketDown: Number,
-    widthWithTires: Number,
-    wheelsBase: Number,
-    track: Number,
-    clearance : Number
+    maxHeightDischarge: Number,
+    rangeDischarge: Number,
+    workTime: Number,
+    maxLiftingForce: Number,
+    minRadiusRotate: Number,
+    speedMove: Number,
+    angleRotation: Number,
+    overallDimensions: String,
+    bucketSize: String,
+    wheelBase: Number,
+    koleya: Number,
+    minClearance: Number,
+    operatingWeight: Number,
+    enginetype: String,
+    engine: String,
+    power: Number,
+    fuelConsumption: Number,
+    hydraulicPressure: Number,
+    wheel: String,
+    controling: String,
+    cabin: String,
+    optionaly: String
+    
 })
 
 module.exports = model('frontTechnicUnit', frontTechnicUnitSchema);

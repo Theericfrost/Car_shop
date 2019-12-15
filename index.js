@@ -11,7 +11,7 @@ const requestRoutes = require('./routes/request')
 const technicpageRoutes = require('./routes/technicpage')
 const fronttechnicpageRoutes = require('./routes/fronttechnicpage')
 
-const addRoutes = require('./routes/add')
+
 const menuRoutes = require('./routes/menu')
 
 
@@ -36,7 +36,7 @@ server.use('/', mainRoutes)
 server.use('/request', requestRoutes)
 server.use('/technicpage', technicpageRoutes)
 server.use('/technicpage/fronttechnicpage', fronttechnicpageRoutes)
-server.use('/add', addRoutes)
+
 server.use('/menu', menuRoutes)
 
 

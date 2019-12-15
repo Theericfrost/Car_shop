@@ -1,7 +1,11 @@
 const {Router} = require('express')
+const Front = require('../models/fronttechnic_unit')
 const router = Router()
 
-router.get('/', (req,res)=>{
+
+
+router.get('/', async (req,res)=>{
+   
     try{
         res.status(200)
         res.render('technicpage',{
