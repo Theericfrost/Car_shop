@@ -1,0 +1,18 @@
+<div class="technic"> 
+    <h1>{{id}}</h1>
+    <h3>Бренд</h3>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab, nisi.</p>
+    <div class='technic_container'>
+        {{#each fronts}}
+        <div class="technic_card">
+            
+            <img src="{{img}}" alt="error">
+            <h4>{{title}}</h4>
+            <p>{{description}}</p>     
+            <p class="price">{{price}}</p>
+            <a class="btn  grey darken-3" href="/technicpage/{{_id}}">Открыть </a>
+        </div>
+        {{/each}}
+    </div>
+</div>
+

@@ -1,0 +1,333 @@
+.header_container {
+    width: 100%;
+    background-color:  #ffb300;
+    color: white;
+}
+
+.header {
+    width: 878px;
+    margin: 0 auto;
+    align-items: center;
+    display: flex
+}
+
+.header_flex {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+}
+
+.header div {
+    padding: 0 0.5rem;
+}
+
+.header img {
+    filter: invert(180);
+}
+
+.header span {
+    display: block;
+    font-size: 0.8rem;
+}
+
+.header p {
+    word-break: break-all;
+    line-height: 0.7rem;
+    padding-left: 5px;
+}
+
+.header_phones {
+    font-size: 1.2rem;
+}
+
+.header_phones_phone {
+    display: flex;
+    align-items: center;
+}
+
+
+.nav-wrapper{
+    padding: 0 2rem;
+}
+
+.nav_menuList {
+    display: none;
+}
+
+.main {
+    width: 100%;
+}
+
+.main h1, .main p, .main h4{
+    text-align: center;
+}
+
+.main_flex {
+    display: flex;
+    justify-content: space-around;
+}
+
+.main_flexItem{
+    width: 100%;
+}
+
+.requestForm {
+    padding: 2rem 0;
+}
+
+.carousel {
+    height: 250px;
+}
+
+.carousel-item img  {
+    width: 250px !important; 
+    height: 200px; 
+}
+
+.carousel-item span {
+    display: block;
+    text-align: center;
+}
+
+.technic {
+    text-align: center;
+}
+
+.technic_container {
+    display: flex;
+    flex-wrap:  wrap;
+    justify-content: space-around;
+}
+
+.technic_card {
+    margin: 1rem 0;
+    width: 24%;
+    text-align: center;
+}
+
+
+
+.technic_card img {
+    width: 100%;
+}
+
+.technic_card a {
+    width: 50%;
+    margin: 1rem 0;
+}
+
+.carpage a {
+    margin: 1rem 0;
+}
+
+.carpage {
+    text-align: center;
+}
+
+#toTop {
+    width:100px;
+    background:#FF5252;
+    text-align:center;
+    position:fixed;
+    bottom:10px; /* отступ кнопки от нижнего края страницы*/
+    right:10px;
+    cursor:pointer;
+    display:none;
+    color:white;
+    font-family:verdana;
+    font-size:11px;
+}
+
+.add button {
+    margin: 1rem 0;
+}
+
+.add h1 {
+    font-size: 2rem;
+    text-align: center;
+}
+
+
+
+@media only screen
+and (min-device-width: 320px)
+and (max-device-width: 568px){
+    
+    .header_container , .header {
+        width: 100%;
+    }
+
+    .header {
+        flex-wrap: wrap;
+    }
+
+    .header_logo span {
+        display: none;
+    }
+
+    .header_logo span {
+       font-size: 0.72rem;
+    }
+
+
+    .header_phones_phone p {
+       line-height: 1.3rem;
+       text-align: right;
+    }
+
+    .header_link a {
+        width: 100%; 
+        margin: 5% 0;
+    }
+
+    .header_flex  {
+       width: 100%;
+       flex-wrap: wrap;
+       justify-content: center;
+    }
+ 
+
+    .nav_menuList {
+        display: block;
+      
+    }
+
+    .nav_menuList a {
+        padding: 2rem;
+    }
+
+    .nav_menuList a img {
+        vertical-align: middle;
+        filter: invert(180);
+    }
+
+    .mobile_menu {
+        text-align: center;
+        line-height: 2rem;
+    }
+
+    .main h1 {
+        font-size: 2rem;
+        padding: 0 0.4rem;
+    }
+
+    .main p {
+        padding: 0 0.4rem;
+    }
+
+    .main_flex {
+        flex-direction: column;
+    }
+
+    .carousel {
+        width: 100%;
+    }
+
+    .technic_card {
+        width: 48%;
+    }
+
+    .technic_card a {
+        width: 70%;
+    }
+}
+
+@media only screen
+and (min-device-width: 568px)
+and (max-device-width: 768px){
+    .header_container, .header {
+        width: 100%;
+        
+    }
+
+    .header {
+        flex-wrap: wrap;
+    }
+
+    .header_flex {
+        width: 100%;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .main_flex {
+        flex-direction: column;
+    }
+
+    .nav_menuList {
+        display: block;
+      
+    }
+
+    .nav_menuList a {
+        padding: 2rem;
+    }
+
+    .nav_menuList a img {
+        vertical-align: middle;
+        filter: invert(180);
+    }
+
+    .mobile_menu {
+        text-align: center;
+        line-height: 2rem;
+    }
+
+    .main h1 {
+        font-size: 2rem;
+    }
+
+    .technic_card a {
+        width: 100%;
+    }
+}
+
+@media only screen
+and (min-device-width: 768px)
+and (max-device-width: 1026px){
+    .header_container, .header {
+        width: 100%;
+        
+    }
+
+    .header {
+        flex-wrap: wrap;
+    }
+
+    .header_flex {
+        width: 100%;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .main_flex {
+        flex-direction: column;
+    }
+
+    .nav_menuList {
+        display: block;
+      
+    }
+
+    .nav_menuList a {
+        padding: 2rem;
+    }
+
+    .nav_menuList a img {
+        vertical-align: middle;
+        filter: invert(180);
+    }
+
+    .mobile_menu {
+        text-align: center;
+        line-height: 2rem;
+    }
+
+    .main h1 {
+        font-size: 2rem;
+    }
+
+    .technic_card a {
+        width: 100%;
+    }
+}

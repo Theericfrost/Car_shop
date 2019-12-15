@@ -1,0 +1,85 @@
+
+<div class="container carpage">
+    <h1>Модель {{front.title}}</h1>
+    <img src="{{front.img}}" alt="">
+    <p>Цена с учетом пошлины, ндс, сертификации и доставки DDP Almaty - <strong class="price">{{front.price}}</strong></p>
+     <table class="striped">
+        <thead>
+            
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>Двигатель</td>
+            <td>{{front.motor}}</td>
+          </tr>
+          <tr>
+            <td>Полная мощность</td>
+            <td>{{front.fullPower}} кВт</td>
+          </tr>
+          <tr>
+            <td>Полезная мощность</td>
+            <td>{{front.netPower}} кВт</td>
+          </tr>
+          <tr>
+            <td>Эксплуатационная масса</td>
+            <td>{{front.operatingWeight}} кг</td>
+          </tr>
+          <tr>
+            <td>Стандартная вместимость ковша</td>
+            <td>{{front.bucketCapacity}} м<sup>3</sup></td>
+          </tr>
+          <tr>
+            <td>Стандартное вырывное усилие</td>
+            <td>{{front.breakingForce}} кН</td>
+          </tr>
+          <tr>
+            <td>Стандартная высота выгрузки</td>
+            <td>{{front.dischargeHeight}} мм</td>
+          </tr>
+          <tr>
+            <td>Максимальная высота выгрузки</td>
+            <td>{{front.maxDischargeHeight}} мм</td>
+          </tr>
+          <tr>
+            <td>Макс. скорость движения вперед</td>
+            <td>{{front.movementSpeedForward}} км/ч</td>
+          </tr>
+          <tr>
+            <td>Макс. скорость движения назад</td>
+            <td>{{front.movementSpeedBack}} км/ч</td>
+          </tr>
+          <tr>
+            <td>Количество передач передний ход</td>
+            <td>{{front.gearsForward}} км/ч</td>
+          </tr>
+          <tr>
+            <td>Количество передач задний ход</td>
+            <td>{{front.gearsBack}} км/ч</td>
+          </tr>
+          <tr>
+            <td>Длина с опущенным ковшом</td>
+            <td>{{front.lengthWithBucketDown}} мм</td>
+          </tr>
+          <tr>
+            <td>Ширина по шинам</td>
+            <td>{{front.widthWithTires}} мм</td>
+          </tr>
+           <tr>
+            <td>Колесная база</td>
+            <td>{{front.wheelsBase}} мм</td>
+          </tr>
+           <tr>
+            <td>Колея</td>
+            <td>{{front.track}} мм</td>
+          </tr>
+           <tr>
+            <td>Клиренс</td>
+            <td>{{front.clearance}} мм</td>
+          </tr>
+        </tbody>
+    </table>
+    <a class="waves-effect orange btn" href="/request">Оставить заявку</a>
+</div>
+
+

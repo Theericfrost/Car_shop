@@ -1,0 +1,45 @@
+<div class="container">
+<div class="requestForm"> 
+    <div class="row">
+        <form class="col s12" action="/request" method="POST">
+            <div class="row">
+                <div class="input-field col s6">
+                    <input name="first_name" id="first_name" type="text" class="validate" required>
+                    <label for="first_name">ФИО*</label>
+                </div>
+
+                <div class="input-field col s6">
+                    <input name="company_name" id="company_name" type="text" class="validate" >
+                    <label for="company_name">Компания</label>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="input-field col s6">
+                    <input name="telephone" id="telephone" type="tel" class="validate" required>
+                    <label for="telephone">Номер телефона*</label>
+                </div>
+                
+                <div class="input-field col s6">
+                    <input name="email" id="email" type="email" class="validate">
+                    <label for="email">Email</label>
+                </div>
+            </div>
+        
+            <div class="row">
+                <div class="input-field col s12">
+                    <textarea name="textarea" id="textarea" class="materialize-textarea" required></textarea>
+                    <label for="textarea">Ваше сообщение*</label>
+                </div>
+            </div>
+
+            <span> * - обезательны к заполнению</span><br/>
+
+            <button type="submit" class="waves-effect waves-light btn">
+                Отправить
+            </button>
+
+        </form>
+    </div>
+</div>
+</div>
