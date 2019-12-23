@@ -178,13 +178,15 @@
 
 .technic_page_unit_front {
     height: 5rem;
-
     width: 100%;
     display: flex;    
     justify-content: center;
     align-items: center;
 }
 
+.tecnic_titleBrand {
+    width: 100%;
+}
 
 
 

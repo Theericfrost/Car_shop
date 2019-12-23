@@ -1,11 +1,22 @@
 <div class="technic"> 
     <h1>Фронтальные погрузчики</h1>
-    <h3>Бренд</h3>
-    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab, nisi.</p>
+    <p>Грузоподъёмность</p>
+    <a class="btn  grey darken-3" href="/technicpage/fronttechnicpage/">Все</a>
+    <a class="btn  grey darken-3" href="/technicpage/fronttechnicpage/filterTons/2999">3 тонны </a>
+    <a class="btn  grey darken-3" href="/technicpage/fronttechnicpage/filterTons/4999">5 тонны</a>
+    
+    <p>Емкость ковша</p>
+    <a class="btn  grey darken-3" href="/technicpage/fronttechnicpage/">Все</a>
+    <a class="btn  grey darken-3" href="/technicpage/fronttechnicpage/filterBucket/1.69">1.7  м<sup>3</sup></a>
+    <a class="btn  grey darken-3" href="/technicpage/fronttechnicpage/filterBucket/2.99">3  м<sup>3</sup></a>
     <div class='technic_container'>
-  
-
-        {{#each fronts}}
+        {{#if lgzts}}
+        <div class="tecnic_titleBrand">
+            <h3>LGZT</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab, nisi.</p>
+        </div>
+        {{/if}}
+        {{#each lgzts}}
         <div class="technic_card">
             
             <img class="technic_card_img" src="http://localhost:3000/img/lgzt/{{title}}.png" alt="error">
@@ -18,6 +29,33 @@
             <a class="btn  grey darken-3" href="/technicpage/fronttechnicpage/{{_id}}">Открыть </a>
         </div>
         {{/each}}
+
+    
     </div>
+
+    
+    <div class='technic_container'>
+        {{#if xcmgs}}
+        <div class="tecnic_titleBrand">
+            <h3>XCMG</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab, nisi.</p>
+        </div>
+        {{/if}}
+        {{#each xcmgs}}
+        <div class="technic_card">
+
+            <img class="technic_card_img" src="http://localhost:3000/img/xcmg/{{title}}.png" alt="error">
+            <h4>{{title}}</h4>
+            <p>{{description}}</p>     
+            <p class="price">{{price}}</p>
+            
+            <p>Емкость ковша {{bucketCapacity}} м<sup>3</sup></p>
+            <p>Грузоподъёмность {{weightLift}} кг</p>
+            <a class="btn  grey darken-3" href="/technicpage/fronttechnicpage/{{_id}}">Открыть </a>
+        </div>
+        {{/each}}
+
+    </div>
+
 </div>
 

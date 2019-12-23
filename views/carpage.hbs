@@ -1,4 +1,4 @@
-
+{{#if front}}
 <div class="container carpage">
     <h1>{{front.brand}} {{front.title}}</h1>
     <img  class="carpage_img" src="http://localhost:3000/img/lgzt/{{front.title}}.png" alt="error img">
@@ -181,5 +181,157 @@
     </table>
     <a class="waves-effect orange btn" href="/request">Оставить заявку</a>
 </div>
+{{/if}}
+
+
+{{#if xcmg}}
+<div class="container carpage">
+    <h1>XCMG {{xcmg.title}}</h1>
+    <img  class="carpage_img" src="http://localhost:3000/img/xcmg/{{xcmg.title}}.png" alt="error img">
+    <p>Цена с учетом пошлины, ндс, сертификации и доставки DDP Almaty - <strong class="price">{{xcmg.price}}</strong></p>
+     <table class="striped car_table">
+        <thead>
+            <tr>
+              <td>Параметр</td>
+              <td>Значение</td>
+            </tr>
+        </thead>
+
+        <tbody>
+
+          <tr>
+            <td>Грузоподъемность</td>
+            <td>{{xcmg.weightLift}} кг</td>
+          </tr>
+
+          <tr>
+            <td>Емкость ковша</td>
+            <td>{{xcmg.bucketCapacity}} м<sup>3</sup></td>
+          </tr>
+
+          {{#if xcmg.maxHeightDischarge}}
+            <tr>
+              <td>Макс. высота выгрузки</td>
+              <td>{{xcmg.maxHeightDischarge}} мм</td>
+            </tr>
+          {{/if}}
+
+          {{#if xcmg.rangeDischarge}}
+            <tr>
+              <td>Дальность выгрузки</td>
+              <td>{{xcmg.rangeDischarge}} мм</td>
+            </tr>
+          {{/if}}
+
+          {{#if xcmg.maxLiftingForce}}
+            <tr>
+              <td>Макс. подъемная cила</td>
+              <td>≥{{xcmg.maxLiftingForce}} кН</td>
+            </tr>
+          {{/if}}
+
+          {{#if xcmg.radiusRotate}}
+            <tr>
+              <td>Радиус разворота</td>
+              <td>{{xcmg.minRadiusRotate}} мм</td>
+            </tr>
+          {{/if}}
+
+          {{#if xcmg.overallDimensions}}
+            <tr>
+              <td>Габаритные размеры (Д*Ш*В)</td>
+              <td>{{xcmg.overallDimensions}} мм</td>
+            </tr>
+          {{/if}}
+
+          {{#if xcmg.bucketSize}}
+            <tr>
+              <td>Размеры ковша</td>
+              <td>{{xcmg.bucketSize}} мм</td>
+            </tr>
+          {{/if}}
+
+          {{#if xcmg.forwardSpeedRange}}
+            <tr>
+              <td>Диапазон скоростей вперед</td>
+              <td>{{xcmg.forwardSpeedRange}} км/ч </td>
+            </tr>
+          {{/if}}
+
+          {{#if xcmg.backSpeedRange}}
+            <tr>
+              <td>Диапазон скоростей назад</td>
+              <td>{{xcmg.backSpeedRange}} км/ч </td>
+            </tr>
+          {{/if}}
+
+           {{#if xcmg.loadTime}}
+            <tr>
+              <td>Время подьема</td>
+              <td>{{xcmg.loadTime}} с </td>
+            </tr>
+          {{/if}}
+
+          {{#if xcmg.cycleTime}}
+            <tr>
+              <td>Время полного цикла</td>
+              <td>{{xcmg.cycleTime}} с </td>
+            </tr>
+          {{/if}}
+
+          {{#if xcmg.wheelBase}}
+            <tr>
+              <td>Колесная база</td>
+              <td>{{xcmg.wheelBase}} мм</td>
+            </tr>
+          {{/if}}
+
+          {{#if xcmg.operatingWeight}}
+            <tr>
+              <td>Эксплуатационная масса</td>
+              <td>{{xcmg.operatingWeight}} кг</td>
+            </tr>
+          {{/if}}
+
+          {{#if xcmg.engine}}
+            <tr>
+              <td>Двигатель</td>
+              <td>{{xcmg.engine}}</td>
+            </tr>
+          {{/if}}
+
+          {{#if xcmg.enginePower}}
+            <tr>
+              <td>Мощность</td>
+              <td>{{xcmg.enginePower}} квт</td>
+            </tr>
+          {{/if}}
+
+          {{#if xcmg.fuelConsumption}}
+            <tr>
+              <td>Удельный Расход топлива</td>
+              <td>≤{{xcmg.fuelConsumption}} г/кВт.ч</td>
+            </tr>
+          {{/if}}        
+
+          {{#if xcmg.controlling}}
+            <tr>
+              <td>Управление</td>
+              <td>{{xcmg.controlling}} </td>
+            </tr>
+          {{/if}}
+
+          {{#if xcmg.cabin}}
+            <tr>
+              <td>Кабина</td>
+              <td>{{xcmg.cabin}} </td>
+            </tr>
+          {{/if}}
+
+        </tbody>
+    </table>
+    <a class="waves-effect orange btn" href="/request">Оставить заявку</a>
+</div>
+{{/if}}
 
 
