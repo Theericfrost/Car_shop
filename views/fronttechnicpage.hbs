@@ -9,6 +9,9 @@
     <a class="btn  grey darken-3" href="/technicpage/fronttechnicpage/">Все</a>
     <a class="btn  grey darken-3" href="/technicpage/fronttechnicpage/filterBucket/1.69">1.7  м<sup>3</sup></a>
     <a class="btn  grey darken-3" href="/technicpage/fronttechnicpage/filterBucket/2.99">3  м<sup>3</sup></a>
+    
+    <div > 
+    
     <div class='technic_container'>
         {{#if lgzts}}
         <div class="tecnic_titleBrand">
@@ -19,7 +22,7 @@
         {{#each lgzts}}
         <div class="technic_card">
             
-            <img class="technic_card_img" src="http://localhost:3000/img/lgzt/{{title}}.png" alt="error">
+            <img class="technic_card_img" src="http://localhost:3000/img/LGZT/{{title}}.png" alt="error">
             <h4>{{title}}</h4>
             <p>{{description}}</p>     
             <p class="price">{{price}}</p>
@@ -44,7 +47,7 @@
         {{#each xcmgs}}
         <div class="technic_card">
 
-            <img class="technic_card_img" src="http://localhost:3000/img/xcmg/{{title}}.png" alt="error">
+            <img class="technic_card_img" src="http://localhost:3000/img/XCMG/{{title}}.png" alt="error">
             <h4>{{title}}</h4>
             <p>{{description}}</p>     
             <p class="price">{{price}}</p>
@@ -57,5 +60,77 @@
 
     </div>
 
+    <div class='technic_container'>
+        {{#if xgmas}}
+        <div class="tecnic_titleBrand">
+            <h3>XGMA</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab, nisi.</p>
+        </div>
+        {{/if}}
+        {{#each xgmas}}
+        <div class="technic_card">
+
+            <img class="technic_card_img" src="http://localhost:3000/img/XGMA/{{title}}.png" alt="error">
+            <h4>{{title}}</h4>
+            <p>{{description}}</p>     
+            <p class="price">{{price}}</p>
+            
+            <p>Емкость ковша {{bucketCapacity}} м<sup>3</sup></p>
+            <p>Грузоподъёмность {{weightLift}} кг</p>
+            <a class="btn  grey darken-3" href="/technicpage/fronttechnicpage/{{_id}}">Открыть </a>
+        </div>
+        {{/each}}
+
+    </div>
+
+    <div class='technic_container'>
+        {{#if brenners}}
+        <div class="tecnic_titleBrand">
+            <h3>BRENNER</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab, nisi.</p>
+        </div>
+        {{/if}}
+        {{#each brenners}}
+        <div class="technic_card">
+
+            <img class="technic_card_img" src="http://localhost:3000/img/brenner/{{title}}.png" alt="error">
+            <h4>{{title}}</h4>
+            <p>{{description}}</p>     
+            <p class="price">{{price}}</p>
+            
+            <p>Емкость ковша {{bucketCapacity}} м<sup>3</sup></p>
+            <p>Грузоподъёмность {{weightLift}} кг</p>
+            <a class="btn  grey darken-3" href="/technicpage/fronttechnicpage/{{_id}}">Открыть </a>
+        </div>
+        {{/each}}
+
+    </div>
+
+    <div class='technic_container'>
+        {{#if lonkings}}
+        <div class="tecnic_titleBrand">
+            <h3>LONKING</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab, nisi.</p>
+        </div>
+        {{/if}}
+        {{#each lonkings}}
+        <div class="technic_card">
+
+            <img class="technic_card_img" src="http://localhost:3000/img/lonking/{{title}}.png" alt="error">
+            <h4>{{title}}</h4>
+            <p>{{description}}</p>     
+            <p class="price">{{price}}</p>
+            
+            <p>Емкость ковша {{bucketCapacity}} м<sup>3</sup></p>
+            <p>Грузоподъёмность {{weightLift}} кг</p>
+            <a class="btn  grey darken-3" href="/technicpage/fronttechnicpage/{{_id}}">Открыть </a>
+        </div>
+        {{/each}}
+
+    </div>
+
+
+
+    </div>
 </div>
 

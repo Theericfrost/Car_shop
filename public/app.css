@@ -97,12 +97,15 @@
     display: flex;
     flex-wrap:  wrap;
     justify-content: space-around;
+
+    
 }
 
 .technic_card {
     margin: 1rem 0;
     width: 24%;
     text-align: center;
+    line-height: 0.7rem;
 }
 
 

@@ -10,17 +10,24 @@ const mainRoutes = require('./routes/main')
 const requestRoutes = require('./routes/request')
 const technicpageRoutes = require('./routes/technicpage')
 const fronttechnicpageRoutes = require('./routes/fronttechnicpage')
-
-
 const menuRoutes = require('./routes/menu')
 
+const ifEquals = require('./hbshelpers/ifEquals')
 
 const PORT =  process.env.PORT || 3000;
 const server = express();
 const hbs = exphbs.create({
   defaultLayout: 'main',
-  extname : 'hbs'
+  extname : 'hbs',
+  helpers : { 
+    ifEquals : ifEquals
+  },
+  partialsDir : path.join(__dirname, 'views/partials') ,
+  
+  
 })
+
+
 
 server.engine('hbs', hbs.engine)
 server.set('view engine' , 'hbs');
@@ -38,6 +45,7 @@ server.use('/technicpage', technicpageRoutes)
 server.use('/technicpage/fronttechnicpage', fronttechnicpageRoutes)
 
 server.use('/menu', menuRoutes)
+
 
 
 async function start(){

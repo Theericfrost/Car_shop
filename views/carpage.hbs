@@ -1,337 +1,98 @@
-{{#if front}}
 <div class="container carpage">
     <h1>{{front.brand}} {{front.title}}</h1>
-    <img  class="carpage_img" src="http://localhost:3000/img/lgzt/{{front.title}}.png" alt="error img">
+    <img  class="carpage_img" src="http://localhost:3000/img/{{front.brand}}/{{front.title}}.png" alt="error img">
     <p>Цена с учетом пошлины, ндс, сертификации и доставки DDP Almaty - <strong class="price">{{front.price}}</strong></p>
-     <table class="striped car_table">
-        <thead>
-            <tr>
-              <td>Параметр</td>
-              <td>Значение</td>
-            </tr>
-        </thead>
+      {{#ifEquals front.title 'LG300'}}
+          {{> lgzt/LG300}}
+      {{/ifEquals}}
+      {{#ifEquals front.title 'T933L'}}
+          {{> lgzt/T933L}}
+      {{/ifEquals}}
+      {{#ifEquals front.title 'T936L'}}
+          {{> lgzt/T936L}}
+      {{/ifEquals}}
+      {{#ifEquals front.title 'T939L'}}
+          {{> lgzt/T939L}}
+      {{/ifEquals}}
+      {{#ifEquals front.title 'T945L'}}
+          {{> lgzt/T945L}}
+      {{/ifEquals}}
 
-        <tbody>
+      {{!-- XCMG --}}
 
-          <tr>
-            <td>Грузоподъемность</td>
-            <td>{{front.weightLift}} кг</td>
-          </tr>
+     {{#ifEquals front.title 'LW300KN'}}
+          {{> xcmg/LW300KN}}
+      {{/ifEquals}}
+      {{#ifEquals front.title 'LW500FN'}}
+          {{> xcmg/LW500FN}}
+      {{/ifEquals}}
+      {{#ifEquals front.title 'LW300FN'}}
+          {{> xcmg/LW300FN}}
+      {{/ifEquals}}
+      {{#ifEquals front.title 'LW800K'}}
+          {{> xcmg/LW800K}}
+      {{/ifEquals}}
+      {{#ifEquals front.title 'LW900KN'}}
+          {{> xcmg/LW900KN}}
+      {{/ifEquals}}
+      {{#ifEquals front.title 'LW1200'}}
+          {{> xcmg/LW1200}}
+      {{/ifEquals}}
+      {{#ifEquals front.title 'ZL50GN'}}
+          {{> xcmg/ZL50GN}}
+      {{/ifEquals}}
+      {{#ifEquals front.title 'LW600K'}}
+          {{> xcmg/LW600K}}
+      {{/ifEquals}}
 
-          <tr>
-            <td>Емкость ковша</td>
-            <td>{{front.bucketCapacity}} м<sup>3</sup></td>
-          </tr>
+      {{! -- XGMA --}}
 
-          {{#if front.maxHeightDischarge}}
-            <tr>
-              <td>Макс. высота выгрузки</td>
-              <td>{{front.maxHeightDischarge}} мм</td>
-            </tr>
-          {{/if}}
+      {{#ifEquals front.title 'XG931H'}}
+          {{> xgma/XG931H}}
+      {{/ifEquals}}
+      {{#ifEquals front.title 'XG932H'}}
+          {{> xgma/XG932H}}
+      {{/ifEquals}}
+      {{#ifEquals front.title 'XG955H'}}
+          {{> xgma/XG955H}}
+      {{/ifEquals}}
+      {{#ifEquals front.title 'XG982H'}}
+          {{> xgma/XG982H}}
+      {{/ifEquals}}
 
-          {{#if front.rangeDischarge}}
-            <tr>
-              <td>Дальность выгрузки</td>
-              <td>{{front.rangeDischarge}} мм</td>
-            </tr>
-          {{/if}}
+      {{! -- BRENNER --}}
 
-          {{#if front.workTime}}
-            <tr>
-              <td>Суммарное время рабочего цикла</td>
-              <td>{{front.workTime}} с</td>
-            </tr>
-          {{/if}}
+      {{#ifEquals front.title 'Brenner968'}}
+          {{> brenner/Brenner968}}
+      {{/ifEquals}}
+      {{#ifEquals front.title 'Brenner977'}}
+          {{> brenner/Brenner977}}
+      {{/ifEquals}}
+      {{#ifEquals front.title 'Brenner928'}}
+          {{> brenner/Brenner928}}
+      {{/ifEquals}}
+      {{#ifEquals front.title 'Brenner936'}}
+          {{> brenner/Brenner936}}
+      {{/ifEquals}}
+      {{#ifEquals front.title 'Brenner938'}}
+          {{> brenner/Brenner938}}
+      {{/ifEquals}}
+      {{#ifEquals front.title 'Brenner956'}}
+          {{> brenner/Brenner956}}
+      {{/ifEquals}}
+      {{#ifEquals front.title 'Brenner958'}}
+          {{> brenner/Brenner958}}
+      {{/ifEquals}}
+    
+    {{! -- LONKING --}}
+      {{#ifEquals front.title 'LG833G'}}
+          {{> lonking/LG833G}}
+      {{/ifEquals}}
+      {{#ifEquals front.title 'LG855N'}}
+          {{> lonking/LG855N}}
+      {{/ifEquals}}
 
-          {{#if front.maxLiftingForce}}
-            <tr>
-              <td>Макс. подъемная cила</td>
-              <td>≥{{front.maxLiftingForce}} кН</td>
-            </tr>
-          {{/if}}
-
-          {{#if front.minRadiusRotate}}
-            <tr>
-              <td>Мин. радиус разворота</td>
-              <td>{{front.minRadiusRotate}} мм</td>
-            </tr>
-          {{/if}}
-
-          {{#if front.speedMove}}
-            <tr>
-              <td>Скорость передвижения</td>
-              <td>{{front.speedMove}} км/час</td>
-            </tr>
-          {{/if}}
-
-          {{#if front.angleRotation}}
-            <tr>
-              <td>Угол поворота</td>
-              <td>{{front.angleRotation}} °</td>
-            </tr>
-          {{/if}}
-
-          {{#if front.overallDimensions}}
-            <tr>
-              <td>Габаритные размеры (Д*Ш*В)</td>
-              <td>{{front.overallDimensions}} мм</td>
-            </tr>
-          {{/if}}
-
-          {{#if front.bucketSize}}
-            <tr>
-              <td>Размеры ковша</td>
-              <td>{{front.bucketSize}} мм</td>
-            </tr>
-          {{/if}}
-
-          {{#if front.wheelBase}}
-            <tr>
-              <td>Колесная база</td>
-              <td>{{front.wheelBase}} мм</td>
-            </tr>
-          {{/if}}
-
-          {{#if front.koleya}}
-            <tr>
-              <td>Колея</td>
-              <td>{{front.koleya}} мм</td>
-            </tr>
-          {{/if}}
-
-          {{#if front.minClearance}}
-            <tr>
-              <td>Миним. клиренс</td>
-              <td>{{front.minClearance}} мм</td>
-            </tr>
-          {{/if}}
-
-          {{#if front.operatingWeight}}
-            <tr>
-              <td>Эксплуатационная масса</td>
-              <td>{{front.operatingWeight}} кг</td>
-            </tr>
-          {{/if}}
-
-          {{#if front.engine}}
-            <tr>
-              <td>Двигатель</td>
-              <td>{{front.engine}}</td>
-            </tr>
-          {{/if}}
-
-          {{#if front.enginetype}}
-            <tr>
-              <td>Топливо для двигателя</td>
-              <td>{{front.enginetype}}</td>
-            </tr>
-          {{/if}}
-
-          {{#if front.power}}
-            <tr>
-              <td>Мощность</td>
-              <td>{{front.power}} квт</td>
-            </tr>
-          {{/if}}
-
-          {{#if front.fuelConsumption}}
-            <tr>
-              <td>Удельный Расход топлива</td>
-              <td>≤{{front.fuelConsumption}} г/кВт.ч</td>
-            </tr>
-          {{/if}}
-
-          {{#if front.hydraulicPressure}}
-            <tr>
-              <td>Давление в гидросистеме</td>
-              <td>{{front.hydraulicPressure}} МПа</td>
-            </tr>
-          {{/if}}
-
-          {{#if front.wheel}}
-            <tr>
-              <td>Шины</td>
-              <td>{{front.wheel}} </td>
-            </tr>
-          {{/if}}
-
-          {{#if front.controling}}
-            <tr>
-              <td>Управление</td>
-              <td>{{front.controling}} </td>
-            </tr>
-          {{/if}}
-
-          {{#if front.cabin}}
-            <tr>
-              <td>Кабина</td>
-              <td>{{front.cabin}} </td>
-            </tr>
-          {{/if}}
-
-          {{#if front.optionaly}}
-            <tr>
-              <td>Дополнительно</td>
-              <td>{{front.optionaly}} </td>
-            </tr>
-          {{/if}}
-
-        </tbody>
-    </table>
     <a class="waves-effect orange btn" href="/request">Оставить заявку</a>
 </div>
-{{/if}}
-
-
-{{#if xcmg}}
-<div class="container carpage">
-    <h1>XCMG {{xcmg.title}}</h1>
-    <img  class="carpage_img" src="http://localhost:3000/img/xcmg/{{xcmg.title}}.png" alt="error img">
-    <p>Цена с учетом пошлины, ндс, сертификации и доставки DDP Almaty - <strong class="price">{{xcmg.price}}</strong></p>
-     <table class="striped car_table">
-        <thead>
-            <tr>
-              <td>Параметр</td>
-              <td>Значение</td>
-            </tr>
-        </thead>
-
-        <tbody>
-
-          <tr>
-            <td>Грузоподъемность</td>
-            <td>{{xcmg.weightLift}} кг</td>
-          </tr>
-
-          <tr>
-            <td>Емкость ковша</td>
-            <td>{{xcmg.bucketCapacity}} м<sup>3</sup></td>
-          </tr>
-
-          {{#if xcmg.maxHeightDischarge}}
-            <tr>
-              <td>Макс. высота выгрузки</td>
-              <td>{{xcmg.maxHeightDischarge}} мм</td>
-            </tr>
-          {{/if}}
-
-          {{#if xcmg.rangeDischarge}}
-            <tr>
-              <td>Дальность выгрузки</td>
-              <td>{{xcmg.rangeDischarge}} мм</td>
-            </tr>
-          {{/if}}
-
-          {{#if xcmg.maxLiftingForce}}
-            <tr>
-              <td>Макс. подъемная cила</td>
-              <td>≥{{xcmg.maxLiftingForce}} кН</td>
-            </tr>
-          {{/if}}
-
-          {{#if xcmg.radiusRotate}}
-            <tr>
-              <td>Радиус разворота</td>
-              <td>{{xcmg.minRadiusRotate}} мм</td>
-            </tr>
-          {{/if}}
-
-          {{#if xcmg.overallDimensions}}
-            <tr>
-              <td>Габаритные размеры (Д*Ш*В)</td>
-              <td>{{xcmg.overallDimensions}} мм</td>
-            </tr>
-          {{/if}}
-
-          {{#if xcmg.bucketSize}}
-            <tr>
-              <td>Размеры ковша</td>
-              <td>{{xcmg.bucketSize}} мм</td>
-            </tr>
-          {{/if}}
-
-          {{#if xcmg.forwardSpeedRange}}
-            <tr>
-              <td>Диапазон скоростей вперед</td>
-              <td>{{xcmg.forwardSpeedRange}} км/ч </td>
-            </tr>
-          {{/if}}
-
-          {{#if xcmg.backSpeedRange}}
-            <tr>
-              <td>Диапазон скоростей назад</td>
-              <td>{{xcmg.backSpeedRange}} км/ч </td>
-            </tr>
-          {{/if}}
-
-           {{#if xcmg.loadTime}}
-            <tr>
-              <td>Время подьема</td>
-              <td>{{xcmg.loadTime}} с </td>
-            </tr>
-          {{/if}}
-
-          {{#if xcmg.cycleTime}}
-            <tr>
-              <td>Время полного цикла</td>
-              <td>{{xcmg.cycleTime}} с </td>
-            </tr>
-          {{/if}}
-
-          {{#if xcmg.wheelBase}}
-            <tr>
-              <td>Колесная база</td>
-              <td>{{xcmg.wheelBase}} мм</td>
-            </tr>
-          {{/if}}
-
-          {{#if xcmg.operatingWeight}}
-            <tr>
-              <td>Эксплуатационная масса</td>
-              <td>{{xcmg.operatingWeight}} кг</td>
-            </tr>
-          {{/if}}
-
-          {{#if xcmg.engine}}
-            <tr>
-              <td>Двигатель</td>
-              <td>{{xcmg.engine}}</td>
-            </tr>
-          {{/if}}
-
-          {{#if xcmg.enginePower}}
-            <tr>
-              <td>Мощность</td>
-              <td>{{xcmg.enginePower}} квт</td>
-            </tr>
-          {{/if}}
-
-          {{#if xcmg.fuelConsumption}}
-            <tr>
-              <td>Удельный Расход топлива</td>
-              <td>≤{{xcmg.fuelConsumption}} г/кВт.ч</td>
-            </tr>
-          {{/if}}        
-
-          {{#if xcmg.controlling}}
-            <tr>
-              <td>Управление</td>
-              <td>{{xcmg.controlling}} </td>
-            </tr>
-          {{/if}}
-
-          {{#if xcmg.cabin}}
-            <tr>
-              <td>Кабина</td>
-              <td>{{xcmg.cabin}} </td>
-            </tr>
-          {{/if}}
-
-        </tbody>
-    </table>
-    <a class="waves-effect orange btn" href="/request">Оставить заявку</a>
-</div>
-{{/if}}
 
 

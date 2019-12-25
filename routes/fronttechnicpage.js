@@ -1,6 +1,5 @@
 const {Router} = require('express')
-const LGZT = require('../models/fronttechnic_unit')
-const XCMG  = require('../models/xcmgfronttechnicunits')
+const FRONT = require('../models/fronttechnic_unit')
 const router = Router()
 
 // router.get('/add', async (req,res)=> {
@@ -16,14 +15,23 @@ const router = Router()
 // })
 router.get('/filterTons/:kgs', async (req,res)=> {
     try{
-        const lgzts = await LGZT.find().where('weightLift').gt(req.params.kgs)
+        const lgzts = await FRONT.find({brand: "LGZT"}).where('weightLift').gt(req.params.kgs)
         .select('title price description  bucketCapacity weightLift')
-        const xcmgs = await XCMG.find().where('weightLift').gt(req.params.kgs)
-        .select('title description price weightLift bucketCapacity')
+        const xcmgs = await FRONT.find({brand: 'XCMG'}).where('weightLift').gt(req.params.kgs)
+        .select('title price description  bucketCapacity weightLift')
+        const xgmas = await FRONT.find({brand: 'XGMA'}).where('weightLift').gt(req.params.kgs)
+        .select('title price description  bucketCapacity weightLift')
+        const brenners = await FRONT.find({brand: 'brenner'}).where('weightLift').gt(req.params.kgs)
+        .select('title price description  bucketCapacity weightLift')
+        const lonkings = await FRONT.find({brand: 'lonking'}).where('weightLift').gt(req.params.kgs)
+        .select('title price description  bucketCapacity weightLift')
         res.status(200)
         res.render('fronttechnicpage',{
             lgzts,
-            xcmgs
+            xcmgs,
+            xgmas,
+            brenners,
+            lonkings
         })
     } catch(err) {
         console.log(err)
@@ -32,14 +40,23 @@ router.get('/filterTons/:kgs', async (req,res)=> {
 
 router.get('/filterBucket/:capacity', async (req,res)=> {
     try{
-        const lgzts = await LGZT.find().where('bucketCapacity').gt(req.params.capacity)
+        const lgzts = await FRONT.find({brand: "LGZT"}).where('bucketCapacity').gt(req.params.capacity)
         .select('title price description  bucketCapacity weightLift')
-        const xcmgs = await XCMG.find().where('bucketCapacity').gt(req.params.capacity)
-        .select('title description price weightLift bucketCapacity')
+        const xcmgs = await FRONT.find({brand: "XCMG"}).where('bucketCapacity').gt(req.params.capacity)
+        .select('title price description  bucketCapacity weightLift')
+        const xgmas = await FRONT.find({brand: "XGMA"}).where('bucketCapacity').gt(req.params.capacity)
+        .select('title price description  bucketCapacity weightLift')
+        const brenners = await FRONT.find({brand: "brenner"}).where('bucketCapacity').gt(req.params.capacity)
+        .select('title price description  bucketCapacity weightLift')
+        const lonkings = await FRONT.find({brand: "lonking"}).where('bucketCapacity').gt(req.params.capacity)
+        .select('title price description  bucketCapacity weightLift')
         res.status(200)
         res.render('fronttechnicpage',{
             lgzts,
-            xcmgs
+            xcmgs,
+            xgmas,
+            brenners,
+            lonkings
         })
     } catch(err) {
         console.log(err)
@@ -48,14 +65,24 @@ router.get('/filterBucket/:capacity', async (req,res)=> {
 
 router.get('/', async (req,res)=>{
     try{
-        const lgzts = await LGZT.find()
+        const lgzts = await FRONT.find({brand: "LGZT"})
         .select('title price description  bucketCapacity weightLift')
-        const xcmgs = await XCMG.find()
+        const xcmgs = await FRONT.find({brand: 'XCMG'})
         .select('title description price weightLift bucketCapacity')
+        const xgmas = await FRONT.find({brand: 'XGMA'})
+        .select('title description price weightLift bucketCapacity')
+        const brenners = await FRONT.find({brand: 'brenner'})
+        .select('title description price weightLift bucketCapacity')
+        const lonkings = await FRONT.find({brand: 'lonking'})
+        .select('title description price weightLift bucketCapacity')
+        
         res.status(200)
         res.render('fronttechnicpage',{
             lgzts,
-            xcmgs
+            xcmgs,
+            xgmas,
+            brenners,
+            lonkings
         })
         
     } catch(err){
@@ -65,13 +92,11 @@ router.get('/', async (req,res)=>{
 
 router.get("/:id", async(req,res)=>{
     try{
-        const front = await LGZT.findById(req.params.id)
-        const xcmg = await XCMG.findById(req.params.id)
+        const front = await FRONT.findById(req.params.id)
      
         res.status(200)
         res.render('carpage',{
-            front,
-            xcmg
+            front
         })
     } catch (err){
         console.log(err)
