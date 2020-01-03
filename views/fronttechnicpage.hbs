@@ -1,43 +1,90 @@
 <div class="technic"> 
-    <h1>Фронтальные погрузчики</h1>
-    <p>Грузоподъёмность</p>
-    <a class="btn  grey darken-3" href="/technicpage/fronttechnicpage/">Все</a>
-    <a class="btn  grey darken-3" href="/technicpage/fronttechnicpage/filterTons/2999">3 тонны </a>
+    
+    <nav class="front_nav_a">
+        <div class="nav-wrapper red accent-2 ">
+            <div class="col s12 ">
+                <a href="#lgzt" class="">LGZT </a><span>|</span>
+                <a href="#xcmg" class="">XCMG </a><span>|</span>
+                <a href="#xgma" class="">XGMA </a><span>|</span>
+                <a href="#brenner" class="">BRENNER </a><span>|</span>
+                <a href="#lonking" class="">LONKING </a><span>|</span>
+                <a href="#liugong" class="">LIUGONG </a><span>|</span>
+                <a href="#sdlg" class="">SDLG </a><span>|</span>
+                <a href="#cat" class="">CAT </a><span>|</span>
+                <a href="#foton" class="">FOTON LOVOL </a><span>|</span>
+                <a href="#shantui" class="">SHANTUI</a>
+            </div>
+        </div>
+    </nav>
+    
+    <h1 class="front_h1">Фронтальные погрузчики</h1>
+  
+    <form action="/technicpage/fronttechnicpage/filter" method="POST">
+    <div class="filterFront">
+        <div class="filterFrontBlock">
+            
+            <div>
+                <label>
+                    <input class="with-gap" name="group1" id="three" type="radio" value="3000" checked/>
+                    <span>Меньше 3 тонн</span>
+                </label>
+            </div>
+            <div>
+                <label>
+                    <input class="with-gap" name="group1" id="five" type="radio" value="5000" />
+                    <span>Меньше 5 тонн</span>
+                </label>
+            </div>
+            <div>
+                <label >
+                    <input class="with-gap" name="group1" id="moreFive" type="radio"  value="5100"/>
+                    <span>Больше 5 тонн</span>
+                </label>
+            </div>
+
+        </div>
+        <div class="filterFrontBlock">
+               <div>
+                <label >
+                    <input class="with-gap" name="group2" id="moreFive" type="radio"  value="1.8" checked/>
+                    <span>Меньше 1.8 м<sup>3</sup></span>
+                </label>
+                </div>
+                <div>
+                <label >
+                    <input class="with-gap" name="group2" id="moreFive" type="radio"  value="3"/>
+                    <span> Меньше 3 м<sup>3</sup></span>
+                </label>
+                </div>
+                <div>
+                <label >
+                    <input class="with-gap" name="group2" id="moreFive" type="radio"  value="3"/>
+                    <span>Больше 3 м<sup>3</sup></span>
+                </label>
+                </div>
+   
+        </div>
+
+    </div>
+    
+  <button class="btn  grey darken-3" type="submit">Поиск</button>
+  </form>
+
+    {{!-- <p>Грузоподъёмность</p>
+    <a  href="/technicpage/fronttechnicpage/">Все</a>
+    <a href="/technicpage/fronttechnicpage/filterTons/2999">3 тонны </a>
     <a class="btn  grey darken-3" href="/technicpage/fronttechnicpage/filterTons/4999">5 тонны</a>
     
     <p>Емкость ковша</p>
     <a class="btn  grey darken-3" href="/technicpage/fronttechnicpage/">Все</a>
     <a class="btn  grey darken-3" href="/technicpage/fronttechnicpage/filterBucket/1.69">1.7  м<sup>3</sup></a>
-    <a class="btn  grey darken-3" href="/technicpage/fronttechnicpage/filterBucket/2.99">3  м<sup>3</sup></a>
+    <a class="btn  grey darken-3" href="/technicpage/fronttechnicpage/filterBucket/2.99">3  м<sup>3</sup></a> --}}
     
     <div > 
     
-    <div class='technic_container'>
-        {{#if lgzts}}
-        <div class="tecnic_titleBrand">
-            <h3>LGZT</h3>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab, nisi.</p>
-        </div>
-        {{/if}}
-        {{#each lgzts}}
-        <div class="technic_card">
-            
-            <img class="technic_card_img" src="http://localhost:3000/img/LGZT/{{title}}.png" alt="error">
-            <h4>{{title}}</h4>
-            <p>{{description}}</p>     
-            <p class="price">{{price}}</p>
-            
-            <p>Емкость ковша {{bucketCapacity}} м<sup>3</sup></p>
-            <p>Грузоподъёмность {{weightLift}} кг</p>
-            <a class="btn  grey darken-3" href="/technicpage/fronttechnicpage/{{_id}}">Открыть </a>
-        </div>
-        {{/each}}
-
+   
     
-    </div>
-
-    
-    <div class='technic_container'>
+    <div class='technic_container' id='xcmg'>
         {{#if xcmgs}}
         <div class="tecnic_titleBrand">
             <h3>XCMG</h3>
@@ -60,7 +107,7 @@
 
     </div>
 
-    <div class='technic_container'>
+    <div class='technic_container' id='xgma'>
         {{#if xgmas}}
         <div class="tecnic_titleBrand">
             <h3>XGMA</h3>
@@ -83,7 +130,7 @@
 
     </div>
 
-    <div class='technic_container'>
+    <div class='technic_container' id="brenner">
         {{#if brenners}}
         <div class="tecnic_titleBrand">
             <h3>BRENNER</h3>
@@ -106,7 +153,7 @@
 
     </div>
 
-    <div class='technic_container'>
+    <div class='technic_container' id='lonking'>
         {{#if lonkings}}
         <div class="tecnic_titleBrand">
             <h3>LONKING</h3>
@@ -128,7 +175,145 @@
         {{/each}}
 
     </div>
+    
+    <div class='technic_container' id='liugong'>
+        {{#if liugongs}}
+        <div class="tecnic_titleBrand">
+            <h3>LIUGONG</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab, nisi.</p>
+        </div>
+        {{/if}}
+        {{#each liugongs}}
+        <div class="technic_card">
 
+            <img class="technic_card_img" src="http://localhost:3000/img/luigong/{{title}}.png" alt="error">
+            <h4>{{title}}</h4>
+            <p>{{description}}</p>     
+            <p class="price">{{price}}</p>
+            
+            <p>Емкость ковша {{bucketCapacity}} м<sup>3</sup></p>
+            <p>Грузоподъёмность {{weightLift}} кг</p>
+            <a class="btn  grey darken-3" href="/technicpage/fronttechnicpage/{{_id}}">Открыть </a>
+        </div>
+        {{/each}}
+
+    </div>
+
+    <div class='technic_container' id="sdlg">
+        {{#if sdlgs}}
+        <div class="tecnic_titleBrand">
+            <h3>SDLG</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab, nisi.</p>
+        </div>
+        {{/if}}
+        {{#each sdlgs}}
+        <div class="technic_card">
+
+            <img class="technic_card_img" src="http://localhost:3000/img/sdlg/{{title}}.png" alt="error">
+            <h4>{{title}}</h4>
+            <p>{{description}}</p>     
+            <p class="price">{{price}}</p>
+            
+            <p>Емкость ковша {{bucketCapacity}} м<sup>3</sup></p>
+            <p>Грузоподъёмность {{weightLift}} кг</p>
+            <a class="btn  grey darken-3" href="/technicpage/fronttechnicpage/{{_id}}">Открыть </a>
+        </div>
+        {{/each}}
+
+    </div>
+
+    <div class='technic_container' id='cat'>
+        {{#if cats}}
+        <div class="tecnic_titleBrand">
+            <h3>CAT</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab, nisi.</p>
+        </div>
+        {{/if}}
+        {{#each cats}}
+        <div class="technic_card">
+
+            <img class="technic_card_img" src="http://localhost:3000/img/cat/{{title}}.png" alt="error">
+            <h4>{{title}}</h4>
+            <p>{{description}}</p>     
+            <p class="price">{{price}}</p>
+            
+            <p>Емкость ковша {{bucketCapacity}} м<sup>3</sup></p>
+            <p>Грузоподъёмность {{weightLift}} кг</p>
+            <a class="btn  grey darken-3" href="/technicpage/fronttechnicpage/{{_id}}">Открыть </a>
+        </div>
+        {{/each}}
+
+    </div>
+
+    <div class='technic_container' id='foton'>
+        {{#if fotons}}
+        <div class="tecnic_titleBrand">
+            <h3>FOTON LOVOL</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab, nisi.</p>
+        </div>
+        {{/if}}
+        {{#each fotons}}
+        <div class="technic_card">
+
+            <img class="technic_card_img" src="http://localhost:3000/img/fotonlovol/{{title}}.png" alt="error">
+            <h4>{{title}}</h4>
+            <p>{{description}}</p>     
+            <p class="price">{{price}}</p>
+            
+            <p>Емкость ковша {{bucketCapacity}} м<sup>3</sup></p>
+            <p>Грузоподъёмность {{weightLift}} кг</p>
+            <a class="btn  grey darken-3" href="/technicpage/fronttechnicpage/{{_id}}">Открыть </a>
+        </div>
+        {{/each}}
+
+    </div>
+
+    <div class='technic_container' id='shantui'>
+        {{#if shantui}}
+        <div class="tecnic_titleBrand">
+            <h3>SHANTUI</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab, nisi.</p>
+        </div>
+        {{/if}}
+        {{#each shantui}}
+        <div class="technic_card">
+
+            <img class="technic_card_img" src="http://localhost:3000/img/shantui/{{title}}.png" alt="error">
+            <h4>{{title}}</h4>
+            <p>{{description}}</p>     
+            <p class="price">{{price}}</p>
+            
+            <p>Емкость ковша {{bucketCapacity}} м<sup>3</sup></p>
+            <p>Грузоподъёмность {{weightLift}} кг</p>
+            <a class="btn  grey darken-3" href="/technicpage/fronttechnicpage/{{_id}}">Открыть </a>
+        </div>
+        {{/each}}
+
+    </div>
+
+     <div class='technic_container' id="lgzt">
+        {{#if lgzts}}
+        <div class="tecnic_titleBrand">
+            <h3>LGZT</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab, nisi.</p>
+        </div>
+        {{/if}}
+        {{#each lgzts}}
+        <div class="technic_card">
+            
+            <img class="technic_card_img" src="http://localhost:3000/img/LGZT/{{title}}.png" alt="error">
+            <h4>{{title}}</h4>
+            <p>{{description}}</p>     
+            <p class="price">{{price}}</p>
+            
+            <p>Емкость ковша {{bucketCapacity}} м<sup>3</sup></p>
+            <p>Грузоподъёмность {{weightLift}} кг</p>
+            <a class="btn  grey darken-3" href="/technicpage/fronttechnicpage/{{_id}}">Открыть </a>
+        </div>
+        {{/each}}
+
+    
+    </div>
 
 
     </div>

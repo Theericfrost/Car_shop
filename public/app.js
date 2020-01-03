@@ -8,10 +8,18 @@ $(document).ready(function(){
 });
  
 const toCurrency = price => {
+    if(price > 1000000) {
+        return new Intl.NumberFormat('ru-RU',
+            {currency: 'kzt',
+            style: 'currency'
+            }).format(price)
+    }
     return new Intl.NumberFormat('ru-RU',
-    {currency: 'kzt',
-     style: 'currency'
-     }).format(price)
+        {
+            currency: 'USD',
+            style: 'currency'
+        }).format(price)
+    
 }
 
 document.querySelectorAll('.price').forEach(node=>{
