@@ -9,8 +9,14 @@ const compression = require('compression')
 const mainRoutes = require('./routes/main')
 const requestRoutes = require('./routes/request')
 const technicpageRoutes = require('./routes/technicpage')
-const fronttechnicpageRoutes = require('./routes/fronttechnicpage')
+
 const menuRoutes = require('./routes/menu')
+const roadRoutes = require('./routes/roadpage')
+const comunalRouter = require('./routes/comunalpage')
+const othersRoutes = require('./routes/otherspage')
+
+const garbagetechnicpageRoutes = require('./routes/garbagetechnicpage')
+const fronttechnicpageRoutes = require('./routes/fronttechnicpage')
 
 const ifEquals = require('./hbshelpers/ifEquals')
 
@@ -43,10 +49,11 @@ server.use('/', mainRoutes)
 server.use('/request', requestRoutes)
 server.use('/technicpage', technicpageRoutes)
 server.use('/technicpage/fronttechnicpage', fronttechnicpageRoutes)
-
+server.use('/roadpage', roadRoutes)
 server.use('/menu', menuRoutes)
-
-
+server.use('/comunalpage', comunalRouter)
+server.use('/otherspage', othersRoutes)
+server.use('/comunalpage/garbagetechnicpage', garbagetechnicpageRoutes)
 
 async function start(){
   try{
