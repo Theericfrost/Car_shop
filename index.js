@@ -17,6 +17,8 @@ const othersRoutes = require('./routes/otherspage')
 
 const garbagetechnicpageRoutes = require('./routes/garbagetechnicpage')
 const fronttechnicpageRoutes = require('./routes/fronttechnicpage')
+const fueltechnicpageRoutes = require('./routes/fueltechnicpage')
+const watertechnicpageRoutes = require('./routes/watertechnicpage')
 
 const ifEquals = require('./hbshelpers/ifEquals')
 
@@ -54,6 +56,8 @@ server.use('/menu', menuRoutes)
 server.use('/comunalpage', comunalRouter)
 server.use('/otherspage', othersRoutes)
 server.use('/comunalpage/garbagetechnicpage', garbagetechnicpageRoutes)
+server.use('/comunalpage/fueltechnicpage', fueltechnicpageRoutes)
+server.use('/comunalpage/watertechnicpage',watertechnicpageRoutes)
 
 async function start(){
   try{

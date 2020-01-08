@@ -25,6 +25,8 @@ const toCurrency = price => {
 document.querySelectorAll('.price').forEach(node=>{
     node.textContent = toCurrency(node.textContent)
  })
+
+document.querySelectorAll('.car_table').oncontextmenu = noselect;
  
   
 $(function() {

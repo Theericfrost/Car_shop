@@ -1,0 +1,148 @@
+<div class="technic"> 
+    
+    <nav class="front_nav_a">
+        <div class="nav-wrapper red accent-2 ">
+            <div class="col s12 ">
+                <a href="#jacs" class="">JAC </a><span>|</span>
+                <a href="#fotons" class="">FOTON </a><span>|</span>
+                <a href="#dongfengs" class="">DONGFENG </a><span>|</span>
+                <a href="#sinotruks" class="">SINOTRUK </a><span>|</span>
+            </div>
+        </div>
+    </nav>
+    
+    <h1 class="front_h1">Бензовозы и Топливозаправщики</h1>
+  
+    {{!-- <form action="/technicpage/fronttechnicpage/filter" method="POST">
+    <div class="filterFront">
+        <div class="filterFrontBlock">
+            
+            <div>
+                <label>
+                    <input class="with-gap" name="group1" id="three" type="radio" value="3000" checked/>
+                    <span>3 тонны и меньше</span>
+                </label>
+            </div>
+            <div>
+                <label>
+                    <input class="with-gap" name="group1" id="five" type="radio" value="5000" />
+                    <span>5 тонн и меньше</span>
+                </label>
+            </div>
+            <div>
+                <label >
+                    <input class="with-gap" name="group1" id="moreFive" type="radio"  value="moreThan5000"/>
+                    <span>Больше 5 тонн</span>
+                </label>
+            </div>
+
+        </div>
+       
+      
+
+    </div>
+    
+  <button class="btn  grey darken-3" type="submit">Поиск</button>
+  <a class="btn  grey darken-3" href="/technicpage/fronttechnicpage">Сброс</a>
+  </form> --}}
+
+    <div > 
+    
+   
+    
+    <div class='technic_container' id='jacs'>
+        {{#if jacs}}
+        <div class="tecnic_titleBrand">
+            <h3>JAC</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab, nisi.</p>
+        </div>
+        {{/if}}
+        {{#each jacs}}
+        <div class="technic_card">
+
+            <img class="technic_card_img" src="http://localhost:3000/img/fuel/{{title}}.png" alt="error">
+            <h4>{{title}}</h4>
+            <p>{{description}}</p>     
+            <p class="price">{{price}}</p>
+            
+            <p> Обьем кузова {{bodyVolume}} м<sup>3</sup></p>
+            
+            <a class="btn  grey darken-3" href="/comunalpage/fueltechnicpage/{{_id}}">Открыть </a>
+        </div>
+        {{/each}}
+
+    </div>
+
+    <div class='technic_container' id='fotons'>
+        {{#if fotons}}
+        <div class="tecnic_titleBrand">
+            <h3>FOTON</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab, nisi.</p>
+        </div>
+        {{/if}}
+        {{#each fotons}}
+        <div class="technic_card">
+
+            <img class="technic_card_img" src="http://localhost:3000/img/fuel/{{title}}.png" alt="error">
+            <h4>{{title}}</h4>
+            <p>{{description}}</p>     
+            <p class="price">{{price}}</p>
+            
+            <p> Обьем кузова {{bodyVolume}} м<sup>3</sup></p>
+            
+            <a class="btn  grey darken-3" href="/comunalpage/fueltechnicpage/{{_id}}">Открыть </a>
+        </div>
+        {{/each}}
+
+    </div>
+
+    <div class='technic_container' id='dongfengs'>
+        {{#if dongfengs}}
+        <div class="tecnic_titleBrand">
+            <h3>Dongfeng</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab, nisi.</p>
+        </div>
+        {{/if}}
+        {{#each dongfengs}}
+        <div class="technic_card">
+
+            <img class="technic_card_img" src="http://localhost:3000/img/fuel/{{title}}.png" alt="error">
+            <h4>{{title}}</h4>
+            <p>{{description}}</p>     
+            <p class="price">{{price}}</p>
+            
+            <p> Обьем кузова {{bodyVolume}} м<sup>3</sup></p>
+            
+            <a class="btn  grey darken-3" href="/comunalpage/fueltechnicpage/{{_id}}">Открыть </a>
+        </div>
+        {{/each}}
+
+    </div>
+
+    <div class='technic_container' id='sinotruks'>
+        {{#if sinotruks}}
+        <div class="tecnic_titleBrand">
+            <h3>SINOTRUK</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab, nisi.</p>
+        </div>
+        {{/if}}
+        {{#each sinotruks}}
+        <div class="technic_card">
+
+            <img class="technic_card_img" src="http://localhost:3000/img/fuel/{{title}}.png" alt="error">
+            <h4>{{title}}</h4>
+            <p>{{description}}</p>     
+            <p class="price">{{price}}</p>
+            
+            <p> Обьем кузова {{bodyVolume}} м<sup>3</sup></p>
+            
+            <a class="btn  grey darken-3" href="/comunalpage/fueltechnicpage/{{_id}}">Открыть </a>
+        </div>
+        {{/each}}
+
+    </div>
+
+
+    </div>
+</div>
+

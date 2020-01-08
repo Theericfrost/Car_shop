@@ -1,5 +1,5 @@
 <div class="container carpage">
-    <h1>{{front.brand}} {{front.title}}</h1>
+    <h1> {{front.title}}</h1>
     <img  class="carpage_img" src="http://localhost:3000/img/{{front.brand}}/{{front.title}}.png" alt="error img">
     {{!-- <p>Цена с учетом пошлины, ндс, сертификации и доставки DDP Almaty - <strong class="price">{{front.price}}</strong></p> --}}
       {{#ifEquals front.title 'LG300'}}
@@ -90,6 +90,23 @@
       {{/ifEquals}}
       {{#ifEquals front.title 'LG855N'}}
           {{> lonking/LG855N}}
+      {{/ifEquals}}
+
+       {{! -- FOTON LOVOL --}}
+      {{#ifEquals front.title 'FL935E'}}
+          {{> foton lovol/FL935E-II}}
+      {{/ifEquals}}
+      {{#ifEquals front.title 'FL938G'}}
+          {{> foton lovol/FL938G-II}}
+      {{/ifEquals}}
+      {{#ifEquals front.title 'FL953'}}
+          {{> foton lovol/FL953}}
+      {{/ifEquals}}
+      {{#ifEquals front.title 'FL955F'}}
+          {{> foton lovol/FL955F-II}}
+      {{/ifEquals}}
+      {{#ifEquals front.title 'FL958G'}}
+          {{> foton lovol/FL958G-II}}
       {{/ifEquals}}
 
     <a class="waves-effect orange btn" href="/request">Оставить заявку</a>
