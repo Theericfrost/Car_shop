@@ -1,6 +1,6 @@
 .header_container {
     width: 100%;
-    background-color:  #ffb300;
+    background-color:  rgb(253, 116, 0);
     color: white;
 }
 
@@ -19,10 +19,6 @@
 
 .header div {
     padding: 0 0.5rem;
-}
-
-.header img {
-    filter: invert(180);
 }
 
 .header span {
@@ -45,9 +41,19 @@
     align-items: center;
 }
 
+.header_phones_phone img {
+	filter: invert(180);
+}
+
 
 .nav-wrapper{
     padding: 0 2rem;
+	background: #274345;
+	
+}
+
+.nav-wrapper a {
+	color: white;
 }
 
 .nav_menuList {
@@ -141,8 +147,8 @@
     background:#FF5252;
     text-align:center;
     position:fixed;
-    bottom:10px; /* отступ кнопки от нижнего края страницы*/
-    right:10px;
+    top: 10px; /* отступ кнопки от нижнего края страницы*/
+    right: 10px;
     cursor:pointer;
     display:none;
     color:white;
@@ -222,12 +228,27 @@
     flex-direction: row;
 }
 
+/*.paralax2 {
+	height: 600px !important;
+}*/
+.paralax_img1 {
+ width: 30%;
+}
+.paralax_img2 {
+	position: absolute;
+	top: -50%;
+	width: 30%;
+}
+
+
+
 @media only screen
 and (min-device-width: 320px)
 and (max-device-width: 568px){
     
     .header_container , .header {
         width: 100%;
+		background: rgb(253, 116, 0) !important
     }
 
     .header {
@@ -251,6 +272,7 @@ and (max-device-width: 568px){
     .header_link a {
         width: 100%; 
         margin: 5% 0;
+	
     }
 
     .header_flex  {
@@ -307,6 +329,14 @@ and (max-device-width: 568px){
     .mobile_none{
         display: none;
     }
+}
+
+.page-footer  {
+	background: #274345
+}
+
+.footer-copyright {
+	background: #263238
 }
 
 @media only screen
