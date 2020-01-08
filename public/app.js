@@ -1,11 +1,28 @@
 $(document).ready(function(){
     $('.carousel').carousel();
-});
 
-
-$(document).ready(function(){
     $('.parallax').parallax();
+
+    $(window).scroll(function() {
+        if($(this).scrollTop() != 0) {
+            $('#toTop').fadeIn();
+        } else {
+            $('#toTop').fadeOut();
+        } 
+    });
+     
+    $('#toTop').click(function() {
+        $('body,html').animate({scrollTop:0},800);
+    });
+    
+    $('.preloader-background').delay(300).fadeOut('slow');
+	
+	$('.preloader-wrapper')
+		.delay(300)
+		.fadeOut();
 });
+
+
  
 const toCurrency = price => {
     if(price > 1000000) {
@@ -27,20 +44,6 @@ document.querySelectorAll('.price').forEach(node=>{
  })
 
 document.querySelectorAll('.car_table').oncontextmenu = noselect;
- 
+
+
   
-$(function() {
-    
-    $(window).scroll(function() {
-        if($(this).scrollTop() != 0) {
-            $('#toTop').fadeIn();
-        } else {
-            $('#toTop').fadeOut();
-        } 
-    });
-     
-    $('#toTop').click(function() {
-        $('body,html').animate({scrollTop:0},800);
-    });
-     
-});

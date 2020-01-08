@@ -1,0 +1,13 @@
+<div class="container carpage">
+    <h1>{{shit.brand}} {{shit.title}}</h1>
+    <img  class="carpage_img" src="http://localhost:3000/img/shit/{{shit.title}}.png" alt="error img">
+    {{!-- <p>Цена с учетом пошлины, ндс, сертификации и доставки DDP Almaty - <strong class="price">{{front.price}}</strong></p> --}}
+      {{#ifEquals shit.title 'LG300'}}
+          {{> lgzt/LG300}}
+      {{/ifEquals}}
+      <p>Тест для Ассинизаторов</p>
+
+    <a class="waves-effect orange btn" href="/request">Оставить заявку</a>
+</div>
+
+

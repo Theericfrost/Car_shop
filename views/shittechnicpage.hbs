@@ -1,0 +1,171 @@
+<div class="technic"> 
+    
+    <nav class="front_nav_a">
+        <div class="nav-wrapper  ">
+            <div class="col s12 ">
+                <a href="#fotons" class="">FOTON </a><span>|</span>
+                <a href="#dongfengs" class="">DONGFENG </a><span>|</span>
+                <a href="#shacmans" class="">SHACMAN </a><span>|</span>
+                <a href="#howos" class="">HOWO </a><span>|</span>
+                 <a href="#dfacs" class="">DFAC </a>
+            </div>
+        </div>
+    </nav>
+    
+    <h1 class="front_h1">Ассенизаторы и каналопромывки</h1>
+  
+    {{!-- <form action="/technicpage/fronttechnicpage/filter" method="POST">
+    <div class="filterFront">
+        <div class="filterFrontBlock">
+            
+            <div>
+                <label>
+                    <input class="with-gap" name="group1" id="three" type="radio" value="3000" checked/>
+                    <span>3 тонны и меньше</span>
+                </label>
+            </div>
+            <div>
+                <label>
+                    <input class="with-gap" name="group1" id="five" type="radio" value="5000" />
+                    <span>5 тонн и меньше</span>
+                </label>
+            </div>
+            <div>
+                <label >
+                    <input class="with-gap" name="group1" id="moreFive" type="radio"  value="moreThan5000"/>
+                    <span>Больше 5 тонн</span>
+                </label>
+            </div>
+
+        </div>
+       
+      
+
+    </div>
+    
+  <button class="btn  grey darken-3" type="submit">Поиск</button>
+  <a class="btn  grey darken-3" href="/technicpage/fronttechnicpage">Сброс</a>
+  </form> --}}
+
+    <div > 
+    
+   
+    
+    <div class='technic_container' id='dongfengs'>
+        {{#if dongfengs}}
+        <div class="tecnic_titleBrand">
+            <h3>Dongfeng</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab, nisi.</p>
+        </div>
+        {{/if}}
+        {{#each dongfengs}}
+        <div class="technic_card">
+
+            <img class="technic_card_img" src="http://localhost:3000/img/shit/{{title}}.png" alt="error">
+            <h4>{{title}}</h4>
+            <p>{{description}}</p>     
+            <p class="price">{{price}}</p>
+            
+            <p> Обьем кузова {{bodyVolume}} м<sup>3</sup></p>
+            
+            <a class="btn  grey darken-3" href="/comunalpage/shittechnicpage/{{_id}}">Открыть </a>
+        </div>
+        {{/each}}
+
+    </div>
+
+    <div class='technic_container' id='shacmans'>
+        {{#if shacmans}}
+        <div class="tecnic_titleBrand">
+            <h3>Shacman</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab, nisi.</p>
+        </div>
+        {{/if}}
+        {{#each shacmans}}
+        <div class="technic_card">
+
+            <img class="technic_card_img" src="http://localhost:3000/img/shit/{{title}}.png" alt="error">
+            <h4>{{title}}</h4>
+            <p>{{description}}</p>     
+            <p class="price">{{price}}</p>
+            
+            <p> Обьем кузова {{bodyVolume}} м<sup>3</sup></p>
+            
+            <a class="btn  grey darken-3" href="/comunalpage/shittechnicpage/{{_id}}">Открыть </a>
+        </div>
+        {{/each}}
+
+    </div>
+
+    <div class='technic_container' id='fotons'>
+        {{#if fotons}}
+        <div class="tecnic_titleBrand">
+            <h3>FOTON</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab, nisi.</p>
+        </div>
+        {{/if}}
+        {{#each fotons}}
+        <div class="technic_card">
+
+            <img class="technic_card_img" src="http://localhost:3000/img/shit/{{title}}.png" alt="error">
+            <h4>{{title}}</h4>
+            <p>{{description}}</p>     
+            <p class="price">{{price}}</p>
+            
+            <p> Обьем кузова {{bodyVolume}} м<sup>3</sup></p>
+            
+            <a class="btn  grey darken-3" href="/comunalpage/shittechnicpage/{{_id}}">Открыть </a>
+        </div>
+        {{/each}}
+
+    </div>
+
+    <div class='technic_container' id='howos'>
+        {{#if howos}}
+        <div class="tecnic_titleBrand">
+            <h3>HOWO</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab, nisi.</p>
+        </div>
+        {{/if}}
+        {{#each howos}}
+        <div class="technic_card">
+
+            <img class="technic_card_img" src="http://localhost:3000/img/shit/{{title}}.png" alt="error">
+            <h4>{{title}}</h4>
+            <p>{{description}}</p>     
+            <p class="price">{{price}}</p>
+            
+            <p> Обьем кузова {{bodyVolume}} м<sup>3</sup></p>
+            
+            <a class="btn  grey darken-3" href="/comunalpage/shittechnicpage/{{_id}}">Открыть </a>
+        </div>
+        {{/each}}
+
+    </div>
+
+    <div class='technic_container' id='dfacs'>
+        {{#if dfacs}}
+        <div class="tecnic_titleBrand">
+            <h3>DFAC</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab, nisi.</p>
+        </div>
+        {{/if}}
+        {{#each dfacs}}
+        <div class="technic_card">
+
+            <img class="technic_card_img" src="http://localhost:3000/img/shit/{{title}}.png" alt="error">
+            <h4>{{title}}</h4>
+            <p>{{description}}</p>     
+            <p class="price">{{price}}</p>
+            
+            <p> Обьем кузова {{bodyVolume}} м<sup>3</sup></p>
+            
+            <a class="btn  grey darken-3" href="/comunalpage/shittechnicpage/{{_id}}">Открыть </a>
+        </div>
+        {{/each}}
+
+    </div>
+
+    </div>
+</div>
+
